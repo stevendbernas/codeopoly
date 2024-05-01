@@ -1,0 +1,23 @@
+Program:
+  commands*=Command
+;
+
+Command:
+  PrintCommand | AssignCommand | ShowCongratulationsCommand
+;
+
+PrintCommand:
+  'SHOW' message=STRING
+;
+
+AssignCommand:
+  'MY' 'MONEY' 'IS' amount=INT 'DOLLARS'
+;
+
+ShowCongratulationsCommand:
+  'SHOW' 'CONGRATULATIONS! YOU WIN!' 'IF' 'MY' 'MONEY' 'IS' 'BIGGER THAN' threshold=INT 'DOLLARS'
+;
+
+Comment:
+  /\/\/.*$/
+;

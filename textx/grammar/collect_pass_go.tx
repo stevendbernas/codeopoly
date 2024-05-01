@@ -1,0 +1,23 @@
+Program:
+  commands*=Command
+;
+
+Command:
+  PrintCommand | AssignCommand | AddValueCommand
+;
+
+PrintCommand:
+  'SHOW' variable=ID
+;
+
+AssignCommand:
+  'MY' variable=ID 'IS' value=INT
+;
+
+AddValueCommand:
+  'COLLECT PASS GO' value=INT 'DOLLARS TO' variable=ID
+;
+
+Comment:
+  /\/\/.*$/
+;

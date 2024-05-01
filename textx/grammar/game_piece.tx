@@ -1,0 +1,31 @@
+Program:
+  commands*=Command
+;
+
+Command:
+  PrintCommand | AssignCommand | MoveCommand | ShowSpacesCommand | ShowMoveCommand
+;
+
+PrintCommand:
+  'SHOW' 'GAME PIECE'
+;
+
+AssignCommand:
+  'MY' ('MONEY' 'IS' amount=INT 'DOLLARS' | 'GAME PIECE' 'IS' identifier=ID)
+;
+
+MoveCommand:
+  'MOVE' 'GAME PIECE' number=INT 'SPACES'
+;
+
+ShowSpacesCommand:
+  'SHOW'
+;
+
+ShowMoveCommand:
+  'GAME PIECE' number=INT 'SPACES'
+;
+
+Comment:
+  /\/\/.*$/
+;
